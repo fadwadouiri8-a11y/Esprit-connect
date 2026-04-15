@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
-  <a href="offres.html">Voir Offres</a>
-</nav>
+<h2>Dashboard étudiant</h2>
 
-<h1>Bienvenue étudiant 👋</h1>
-<p>Consulte les stages disponibles</p>
+<form action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data">
+  <label>Upload CV:</label>
+  <input type="file" name="cv">
+  <button class="btn-primary">Envoyer</button>
+</form>
 
 </body>
 </html>
