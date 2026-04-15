@@ -1,20 +1,23 @@
-function login() {
-  let user = document.getElementById("user").value;
-  let pass = document.getElementById("pass").value;
+const express = require("express");
+const multer = require("multer");
+const cors = require("cors");
 
-  if(user && pass){
-    alert("Login successful!");
-    window.location.href = "forum.html";
-  } else {
-    alert("Fill all fields!");
+const app = express();
+app.use(cors());
+
+const storage = multer.diskStorage({
+  destination: "uploads/",
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
   }
-}
+});
 
-function addPost() {
-  let text = document.getElementById("post").value;
-  let posts = document.getElementById("posts");
+const upload = multer({ storage });
 
-  if(text){
-    posts.innerHTML += "<p>" + text + "</p>";
-  }
-}
+app.post("/upload", upload.single("cv"), (req, res) => {
+  res.send("CV uploaded successfully!");
+});
+
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
+});
