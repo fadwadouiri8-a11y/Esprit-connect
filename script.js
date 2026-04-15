@@ -1,16 +1,20 @@
 function login() {
   let user = document.getElementById("user").value;
   let pass = document.getElementById("pass").value;
-  let msg = document.getElementById("msg");
 
-  if(user === "student" && pass === "1234"){
-    msg.innerHTML = "Login success ✅";
-    window.location.href = "dashboard.html";
+  if(user && pass){
+    alert("Login successful!");
+    window.location.href = "forum.html";
   } else {
-    msg.innerHTML = "Login failed ❌";
+    alert("Fill all fields!");
   }
 }
 
-function apply() {
-  alert("Candidature envoyée ✅");
+function addPost() {
+  let text = document.getElementById("post").value;
+  let posts = document.getElementById("posts");
+
+  if(text){
+    posts.innerHTML += "<p>" + text + "</p>";
+  }
 }
