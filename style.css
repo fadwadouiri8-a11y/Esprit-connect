@@ -1,47 +1,93 @@
 body {
-  font-family: Arial;
-  margin: 0;
-  background: #f4f6f9;
-}
-
-header {
-  display:flex;
-  justify-content:space-between;
-  padding:20px;
-  background:#0f172a;
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #0f172a, #1e293b);
   color:white;
 }
 
-.btn, .btn-primary {
-  padding:10px 15px;
-  border-radius:8px;
+/* NAVBAR */
+.nav {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav a {
+  color:white;
+  margin-left:15px;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.nav a:hover {
+  opacity:1;
+}
+
+/* HERO */
+.hero {
+  text-align:center;
+  padding:100px 20px;
+}
+
+.hero h1 {
+  font-size:40px;
+}
+
+.btn-primary {
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:#3b82f6;
+  border-radius:10px;
+  color:white;
   text-decoration:none;
 }
 
-.btn { background:white; color:black; }
-.btn-primary { background:#2563eb; color:white; }
-
-.hero {
-  text-align:center;
-  padding:80px 20px;
-  background:linear-gradient(to right,#2563eb,#1e40af);
-  color:white;
-}
-
-.companies {
-  padding:40px;
-  text-align:center;
-}
-
-.grid {
+/* CARDS */
+.cards {
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding:40px;
 }
 
 .card {
-  background:white;
+  background: rgba(255,255,255,0.08);
   padding:20px;
+  border-radius:15px;
+  backdrop-filter: blur(10px);
+  text-align:center;
+}
+
+/* OFFERS */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding:40px;
+}
+
+.offer {
+  background: rgba(255,255,255,0.08);
+  padding:20px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.offer:hover {
+  transform: translateY(-5px);
+}
+
+button {
+  margin-top:10px;
+  padding:10px;
+  width:100%;
+  border:none;
   border-radius:10px;
-  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  background:#3b82f6;
+  color:white;
+  cursor:pointer;
 }
