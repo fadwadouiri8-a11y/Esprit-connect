@@ -1,2 +1,2 @@
-# Esprit-connect
+# StageLink
 Site web pour étudiants ESPRIT
