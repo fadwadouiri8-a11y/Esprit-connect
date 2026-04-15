@@ -3,10 +3,14 @@ function login() {
   let pass = document.getElementById("pass").value;
   let msg = document.getElementById("msg");
 
-  if(user === "fadwa" && pass === "04959277Stic"){
-    msg.innerHTML = "Login successful ✅";
-    window.location.href = "courses.html";
+  if(user === "student" && pass === "1234"){
+    msg.innerHTML = "Login success ✅";
+    window.location.href = "dashboard.html";
   } else {
-    msg.innerHTML = "Wrong username or password ❌";
+    msg.innerHTML = "Login failed ❌";
   }
+}
+
+function apply() {
+  alert("Candidature envoyée ✅");
 }
